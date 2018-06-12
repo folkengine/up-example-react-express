@@ -2,12 +2,14 @@ import React, { Component } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 
+const PUBLIC_URL = process.env.PUBLIC_URL || "";
+
 class App extends Component {
   state = {
     testResponse: "Waiting for response..."
   };
   async componentDidMount() {
-    const response = await fetch("/api/test");
+    const response = await fetch(PUBLIC_URL + "/api/test");
     const message = await response.json();
     this.setState({
       testResponse: message
