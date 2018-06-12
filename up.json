@@ -1,0 +1,10 @@
+{
+  "name": "up-example-react-express",
+  "regions": ["us-west-1"],
+  "proxy": {
+    "command": "node server/index.js"
+  },
+  "hooks": {
+    "build": "yarn build"
+  }
+}
