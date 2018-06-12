@@ -4,6 +4,18 @@
   "proxy": {
     "command": "node server/index.js"
   },
+  "stages": {
+    "staging": {
+      "hooks": {
+        "build": "PUBLIC_URL=/staging yarn build"
+      }
+    },
+    "production": {
+      "hooks": {
+        "build": "PUBLIC_URL=/production yarn build"
+      }
+    }
+  },
   "hooks": {
     "build": "yarn build"
   }
