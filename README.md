@@ -6,6 +6,7 @@ and able to be deployed to AWS Lambda with Apex Up.
 ## Benefits
 
 - Deploys in seconds
+- Deploy a new project in under a minute
 - Low infrastructure overhead
 - Very low cost
 - AWS
@@ -13,14 +14,14 @@ and able to be deployed to AWS Lambda with Apex Up.
 ## Tradeoffs
 
 - AWS ;)
-- AWS Lambda cold-start behavior
+- AWS Lambda currently supports up to Node.js 8.10
+- AWS Lambda adds some request latency when it has to cold-start
 - API Gateway complicates the PUBLIC_URL, see notes below
 
 ## Notes
 
-- The code is for demonstration purposes only, it is not intended to represent best practices
 - The client code is stripped down from [create-react-app](https://github.com/facebook/create-react-app)
-- There are three Node projects in this repo:
+- There are three Node.js projects in this repo:
   - /package.json - container that provides CLI commands and configuration of Apex Up
   - /client/package.json - React client
   - /server/package.json - Express server
