@@ -1,6 +1,7 @@
 {
   "name": "up-example-react-express",
-  "regions": ["us-west-1"],
+  "regions": ["us-east-2"],
+  "profile": "up",
   "proxy": {
     "command": "node server/index.js"
   },
